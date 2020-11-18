@@ -1,0 +1,14 @@
+<h1><strong>Here are the restaurants</strong></h1>
+
+<ol>
+<% @restaurants.each do |resto| %>
+  <li><%= link_to resto.name, restaurant_path(id: resto.id)%>
+    <br>Address: <%= resto.address%>
+    <br>Cuisine: <%= resto.category %></li>
+  <% end%>
+</ol>
+
+<br>
+<button class="btn">
+  <%= link_to "Create new restaurant", new_restaurant_path %>
+</button>

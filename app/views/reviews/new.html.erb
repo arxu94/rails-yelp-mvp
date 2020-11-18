@@ -1,0 +1,15 @@
+<h1><strong>Add new review</strong></h1>
+
+<%= simple_form_for [@restaurant, @review] do |f| %>
+  <div class="form-inputs">
+    <%= f.input :rating %>
+    <%= f.input :content %>
+  </div>
+
+  <%= f.submit "Submit review", class: "btn btn-primary" %>
+<% end %>
+
+<br>
+<button class="btn">
+  <%= link_to "Back to all restaurants", restaurants_path %>
+</button>
